@@ -1,0 +1,9 @@
+project: savantenvs/ruby-pg
+target: coder-encode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/coder-encode/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-coder-encode
+    libfuzzer: true
+    timeout: 10

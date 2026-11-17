@@ -1,0 +1,9 @@
+project: savantenvs/ruby-pg
+target: bin-simple-decode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bin-simple-decode/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-bin-simple-decode
+    libfuzzer: true
+    timeout: 10

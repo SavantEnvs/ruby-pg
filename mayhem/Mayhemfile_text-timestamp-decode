@@ -1,0 +1,9 @@
+project: savantenvs/ruby-pg
+target: text-timestamp-decode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/text-timestamp-decode/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-text-timestamp-decode
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/ruby-pg
+target: text-copy-row-decode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/text-copy-row-decode/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-text-copy-row-decode
+    libfuzzer: true
+    timeout: 10
